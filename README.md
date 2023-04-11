@@ -55,10 +55,9 @@ ___
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HarithKavish&layout=compact&text_color=daf7dc&bg_color=151515)](https://github.com/HarithKavish/github-readme-stats)
 
-___
-
-
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=HarithKavish&theme=submarine-flowers&border_radius=5&fire=DD701B)](https://git.io/streak-stats)
+
+___
 
 <br>
 
