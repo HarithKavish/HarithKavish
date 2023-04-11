@@ -19,6 +19,8 @@
 - 🔧 &nbsp; Google Collab | Jupyter | Visual Studio code  | Git
 - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | Figma -->
 
+___
+
 <div align="center">
   <img alt="Python 3" src="https://img.shields.io/badge/Python-37709F?style=for-the-badge&logo=python&logoColor=white" />
   <img alt="Rest API" src="https://img.shields.io/badge/Rest API-319795?style=for-the-badge&logo=RestAPI&logoColor=white" />
@@ -74,4 +76,4 @@
 &nbsp; <a href="mailto:harithkavish40@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png"  width="50" /></a>
 </p>
 
-⭐️ From [kumawatlalit912](https://github.com/kumawatlalit912)
+<!-- ⭐️ From [kumawatlalit912](https://github.com/kumawatlalit912) -->
