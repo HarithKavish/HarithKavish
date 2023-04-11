@@ -22,7 +22,7 @@
 - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | Figma -->
 
 
-
+<br>
 <div align="center">
   <img alt="Python 3" src="https://img.shields.io/badge/Python-37709F?style=for-the-badge&logo=python&logoColor=white" />
   <img alt="Rest API" src="https://img.shields.io/badge/Rest API-319795?style=for-the-badge&logo=RestAPI&logoColor=white" />
@@ -52,7 +52,7 @@
   <br>
   <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
 </div>
-
+</br>
 
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HarithKavish&layout=compact&text_color=daf7dc&bg_color=151515)](https://github.com/HarithKavish/github-readme-stats)
