@@ -19,6 +19,8 @@
 - 🔧 &nbsp; Google Collab | Jupyter | Visual Studio code  | Git
 - 🖥 &nbsp; Adobe Xd | Illustrator | Photoshop | Figma -->
 
+
+</br>
 ___
 
 <div align="center">
