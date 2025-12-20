@@ -54,19 +54,27 @@
     <link rel="stylesheet" href="https://harithkavish.github.io/style.css">
     <!-- Neo AI Widget - Shared Loader -->
     <script src="https://harithkavish.github.io/widget-loader.js"></script>
-</head>
-
-<body>
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
+            const html = document.documentElement;
+            const applyDark = savedTheme === 'dark';
+            html.classList[applyDark ? 'add' : 'remove']('dark-mode');
+            const syncBody = () => {
+                const body = document.body;
+                if (!body) return;
+                body.classList[applyDark ? 'add' : 'remove']('dark-mode');
+            };
+            if (document.body) {
+                syncBody();
             } else {
-                document.body.classList.remove('dark-mode');
+                document.addEventListener('DOMContentLoaded', syncBody);
             }
         })();
     </script>
+</head>
+
+<body>
     <main class="main-center"
         style="background: rgba(255,255,255,0.6); backdrop-filter: blur(18px) saturate(180%); -webkit-backdrop-filter: blur(18px) saturate(180%); border-radius: 18px; border: 1.5px solid rgba(255,255,255,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.18); width: 700px; min-height: 420px; margin: 48px auto 32px auto; display: block; text-align: left;">
         <style>
