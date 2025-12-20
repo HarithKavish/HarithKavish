@@ -51,214 +51,101 @@
   }
   </script>
 
-    <!-- Theme detection - add this BEFORE CSS -->
+    <link rel="stylesheet" href="https://harithkavish.github.io/style.css">
+    <!-- Neo AI Widget - Shared Loader -->
+    <script src="https://harithkavish.github.io/widget-loader.js"></script>
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
             if (savedTheme === 'dark' || (prefersDark && !savedTheme)) {
-                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark-mode');
             }
         })();
     </script>
-
-    <!-- Neo AI Widget - Shared Loader -->
-    <script src="https://harithkavish.github.io/widget-loader.js"></script>
-
-    <style>
-        body {
-            background: #fff;
-            color: #222;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        main {
-            max-width: 700px;
-            margin: 3rem auto 2rem auto;
-            padding: 2rem 1.5rem;
-            background: #fff;
-            border-radius: 12px;
-            border: 1px solid #eaeaea;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.3rem;
-            color: #0078d4;
-        }
-
-        .subtitle {
-            color: #444;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        section {
-            margin-bottom: 1.5rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        .contact a {
-            color: #0078d4;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .label {
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            color: #888;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                margin: 3rem 1rem 2rem 1rem;
-                padding: 1rem 0.5rem;
-            }
-        }
-
-        /* Dark Theme Styles */
-        .dark body {
-            background: #0d1117;
-            color: #c9d1d9;
-        }
-
-        .dark main {
-            background: #161b22;
-            border: 1px solid #30363d;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .dark h1 {
-            color: #58a6ff;
-        }
-
-        .dark .subtitle {
-            color: #8b949e;
-        }
-
-        .dark .label {
-            color: #c9d1d9;
-        }
-
-        .dark .contact a {
-            color: #58a6ff;
-        }
-
-        .dark .contact a:hover {
-            color: #79c0ff;
-        }
-
-        .dark footer {
-            color: #8b949e;
-        }
-
-        .dark footer a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        .dark footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
-    <main>
+    <main class="main-center"
+        style="background: rgba(255,255,255,0.6); backdrop-filter: blur(18px) saturate(180%); -webkit-backdrop-filter: blur(18px) saturate(180%); border-radius: 18px; border: 1.5px solid rgba(255,255,255,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.18); width: 700px; min-height: 420px; margin: 48px auto 32px auto; display: block; text-align: left;">
+        <style>
+            .label {
+                font-weight: bold;
+                color: #0078d4;
+                font-size: 1.08rem;
+                margin-top: 1.2em;
+                margin-bottom: 0.4em;
+                letter-spacing: 0.01em;
+                display: block;
+            }
+
+            main.main-center ul {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            main.main-center ul li {
+                margin-left: 1.2em;
+                list-style-position: inside;
+            }
+        </style>
         <h1>Harith Kavish</h1>
         <div class="subtitle">AI-Driven Systems Architect & Creative Director</div>
-
-        <section>
-            <div class="label">Career Objective:</div>
-            <div>
-                To disseminate my experience, knowledge, and skills in the professional sphere towards a resourceful
-                mission and in turn take the learning experience for gainfully fulfilling the personal and
-                organizational objectives.
-            </div>
-        </section>
-
-        <section>
-            <div class="label">Technical Skills:</div>
-            <ul>
-                <li>React.js, CSS, JavaScript, HTML</li>
-                <li>Node.js, SpringBoot (Java), MySQL, PostgreSQL</li>
-                <li>Java, Python, GitHub</li>
-                <li>Tableau, Selenium, AWS</li>
-                <li>OpenCV, YOLOv8, TensorFlow, Keras</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="label">Projects:</div>
-            <ul>
-                <li><b>SkinNet Analyzer:</b> Deep Learning-based skin disease detection system (TensorFlow, Keras,
-                    Python, 86.7% accuracy)</li>
-                <li><b>Multi-Object Detection:</b> Computer Vision with OpenCV, YOLOv8, CNN (TensorFlow, Keras, Cifar10)
-                </li>
-                <li><b>AgroCloud Finance Pro:</b> Full Stack Finance app (React+Vite, Java SpringBoot, PostgreSQL, JWT)
-                </li>
-                <li><b>Online Tutoring Platform:</b> Collaborative workspace (React.js, Java SpringBoot, MySQL, JWT)
-                </li>
-                <li><b>Music Library Management System:</b> Console-based Java app for music management</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="label">Education:</div>
-            <ul>
-                <li>B.Tech Artificial Intelligence and Data Science, Sri Krishna College of Engineering and Technology,
-                    2021-2025</li>
-                <li>HSE, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.6%</li>
-                <li>SSLC, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.51%</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="label">Certifications:</div>
-            <ul>
-                <li>Machine Learning Master Class (Udemy)</li>
-                <li>Hands-on AI with TensorFlow (Infosys SpringBoard)</li>
-                <li>Microsoft Azure Cloud Computing Fundamentals</li>
-                <li>PCAP - Programming Essentials in Python (Cisco)</li>
-                <li>Amazon Web Services Cloud Foundations</li>
-                <li>NPTEL: Ethics in Engineering, Psychology of Stress, Enhancing Soft Skills, Organizational Behaviour
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="label">Soft Skills:</div>
-            <ul>
-                <li>Project Management, Problem Solving, Creativity, Leadership, Communication Skills</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="label">Contact:</div>
-            <div class="contact">
-                <div>Email: <a href="mailto:harithkavish40@gmail.com">harithkavish40@gmail.com</a></div>
-                <div>Phone: <a href="tel:+919976902697">+91 9976902697</a></div>
-                <div>LinkedIn: <a href="https://www.linkedin.com/in/harithkavish/"
-                        target="_blank">linkedin.com/in/harithkavish</a></div>
-                <div>GitHub: <a href="https://github.com/harithkavish" target="_blank">github.com/harithkavish</a></div>
-            </div>
-        </section>
+        <div class="label">Career Objective:</div>
+        <div>
+            To disseminate my experience, knowledge, and skills in the professional sphere towards a resourceful
+            mission and in turn take the learning experience for gainfully fulfilling the personal and
+            organizational objectives.
+        </div>
+        <div class="label">Technical Skills:</div>
+        <ul>
+            <li>React.js, CSS, JavaScript, HTML</li>
+            <li>Node.js, SpringBoot (Java), MySQL, PostgreSQL</li>
+            <li>Java, Python, GitHub</li>
+            <li>Tableau, Selenium, AWS</li>
+            <li>OpenCV, YOLOv8, TensorFlow, Keras</li>
+        </ul>
+        <div class="label">Projects:</div>
+        <ul>
+            <li><b>SkinNet Analyzer:</b> Deep Learning-based skin disease detection system (TensorFlow, Keras,
+                Python, 86.7% accuracy)</li>
+            <li><b>Multi-Object Detection:</b> Computer Vision with OpenCV, YOLOv8, CNN (TensorFlow, Keras, Cifar10)
+            </li>
+            <li><b>AgroCloud Finance Pro:</b> Full Stack Finance app (React+Vite, Java SpringBoot, PostgreSQL, JWT)
+            </li>
+            <li><b>Online Tutoring Platform:</b> Collaborative workspace (React.js, Java SpringBoot, MySQL, JWT)
+            </li>
+            <li><b>Music Library Management System:</b> Console-based Java app for music management</li>
+        </ul>
+        <div class="label">Education:</div>
+        <ul>
+            <li>B.Tech Artificial Intelligence and Data Science, Sri Krishna College of Engineering and Technology,
+                2021-2025</li>
+            <li>HSE, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.6%</li>
+            <li>SSLC, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.51%</li>
+        </ul>
+        <div class="label">Certifications:</div>
+        <ul>
+            <li>Machine Learning Master Class (Udemy)</li>
+            <li>Hands-on AI with TensorFlow (Infosys SpringBoard)</li>
+            <li>Microsoft Azure Cloud Computing Fundamentals</li>
+            <li>PCAP - Programming Essentials in Python (Cisco)</li>
+            <li>Amazon Web Services Cloud Foundations</li>
+            <li>NPTEL: Ethics in Engineering, Psychology of Stress, Enhancing Soft Skills, Organizational Behaviour
+            </li>
+        </ul>
+        <div class="label">Soft Skills:</div>
+        <ul>
+            <li>Project Management, Problem Solving, Creativity, Leadership, Communication Skills</li>
+        </ul>
+        <div class="label">Contact:</div>
+        <div class="contact">
+            <div>Email: <a href="mailto:harithkavish40@gmail.com">harithkavish40@gmail.com</a></div>
+            <div>Phone: <a href="tel:+919976902697">+91 9976902697</a></div>
+            <div>LinkedIn: <a href="https://www.linkedin.com/in/harithkavish/"
+                    target="_blank">linkedin.com/in/harithkavish</a></div>
+            <div>GitHub: <a href="https://github.com/harithkavish" target="_blank">github.com/harithkavish</a></div>
+        </div>
     </main>
 </body>
 
