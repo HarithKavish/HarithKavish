@@ -1,0 +1,66 @@
+### Page state
+- Page URL: https://harithkavish.github.io/HarithKavish/
+- Page Title: Harith Kavish | AI-Driven Systems Architect & Creative Director
+- Page Snapshot:
+```yaml
+- main [ref=e2]:
+  - heading "Harith Kavish" [level=1] [ref=e3]
+  - generic [ref=e4]: AI-Driven Systems Architect & Creative Director
+  - generic [ref=e5]:
+    - generic [ref=e6]: "Career Objective:"
+    - generic [ref=e7]: To disseminate my experience, knowledge, and skills in the professional sphere towards a resourceful mission and in turn take the learning experience for gainfully fulfilling the personal and organizational objectives.
+  - generic [ref=e8]:
+    - generic [ref=e9]: "Technical Skills:"
+    - list [ref=e10]:
+      - listitem [ref=e11]: React.js, CSS, JavaScript, HTML
+      - listitem [ref=e12]: Node.js, SpringBoot (Java), MySQL, PostgreSQL
+      - listitem [ref=e13]: Java, Python, GitHub
+      - listitem [ref=e14]: Tableau, Selenium, AWS
+      - listitem [ref=e15]: OpenCV, YOLOv8, TensorFlow, Keras
+  - generic [ref=e16]:
+    - generic [ref=e17]: "Projects:"
+    - list [ref=e18]:
+      - listitem [ref=e19]: "SkinNet Analyzer: Deep Learning-based skin disease detection system (TensorFlow, Keras, Python, 86.7% accuracy)"
+      - listitem [ref=e20]: "Multi-Object Detection: Computer Vision with OpenCV, YOLOv8, CNN (TensorFlow, Keras, Cifar10)"
+      - listitem [ref=e21]: "AgroCloud Finance Pro: Full Stack Finance app (React+Vite, Java SpringBoot, PostgreSQL, JWT)"
+      - listitem [ref=e22]: "Online Tutoring Platform: Collaborative workspace (React.js, Java SpringBoot, MySQL, JWT)"
+      - listitem [ref=e23]: "Music Library Management System: Console-based Java app for music management"
+  - generic [ref=e24]:
+    - generic [ref=e25]: "Education:"
+    - list [ref=e26]:
+      - listitem [ref=e27]: B.Tech Artificial Intelligence and Data Science, Sri Krishna College of Engineering and Technology, 2021-2025
+      - listitem [ref=e28]: HSE, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.6%
+      - listitem [ref=e29]: SSLC, Chinmaya Vidyalaya P A C R Matric HR SEC School Rajapalayam, 95.51%
+  - generic [ref=e30]:
+    - generic [ref=e31]: "Certifications:"
+    - list [ref=e32]:
+      - listitem [ref=e33]: Machine Learning Master Class (Udemy)
+      - listitem [ref=e34]: Hands-on AI with TensorFlow (Infosys SpringBoard)
+      - listitem [ref=e35]: Microsoft Azure Cloud Computing Fundamentals
+      - listitem [ref=e36]: PCAP - Programming Essentials in Python (Cisco)
+      - listitem [ref=e37]: Amazon Web Services Cloud Foundations
+      - listitem [ref=e38]: "NPTEL: Ethics in Engineering, Psychology of Stress, Enhancing Soft Skills, Organizational Behaviour"
+  - generic [ref=e39]:
+    - generic [ref=e40]: "Soft Skills:"
+    - list [ref=e41]:
+      - listitem [ref=e42]: Project Management, Problem Solving, Creativity, Leadership, Communication Skills
+  - generic [ref=e43]:
+    - generic [ref=e44]: "Contact:"
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - text: "Email:"
+        - link "harithkavish40@gmail.com" [ref=e47] [cursor=pointer]:
+          - /url: mailto:harithkavish40@gmail.com
+      - generic [ref=e48]:
+        - text: "Phone:"
+        - link "+91 9976902697" [ref=e49] [cursor=pointer]:
+          - /url: tel:+919976902697
+      - generic [ref=e50]:
+        - text: "LinkedIn:"
+        - link "linkedin.com/in/harithkavish" [ref=e51] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/harithkavish/
+      - generic [ref=e52]:
+        - text: "GitHub:"
+        - link "github.com/harithkavish" [ref=e53] [cursor=pointer]:
+          - /url: https://github.com/harithkavish
+```
