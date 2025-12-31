@@ -50,8 +50,3 @@
   <br>
   <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" />
 </div>
-</br>
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=HarithKavish&layout=compact&text_color=daf7dc&bg_color=000000)
-
-<img align="left" src="https://github-readme-stats.vercel.app/api?username=HarithKavish&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40" alt="harith's Github Stats">
