@@ -52,94 +52,96 @@
   }
   </script>
 
-    <link rel="stylesheet" href="https://harithkavish.github.io/style.css">
+    <!-- Harith Design System v1.0.0 -->
+    <link rel="stylesheet" href="https://harithkavish.github.io/harith-design-system/v1.0.0/tokens.css">
+    <link rel="stylesheet" href="https://harithkavish.github.io/harith-design-system/v1.0.0/base.css">
+    <link rel="stylesheet" href="https://harithkavish.github.io/harith-design-system/v1.0.0/components.css">
+    <link rel="stylesheet" href="https://harithkavish.github.io/harith-design-system/v1.0.0/utils.css">
+
     <!-- Neo AI Widget - Shared Loader -->
     <script src="https://harithkavish.github.io/widget-loader.js"></script>
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            const html = document.documentElement;
-            const applyDark = savedTheme === 'dark';
-            html.classList[applyDark ? 'add' : 'remove']('dark-mode');
-            const syncBody = () => {
-                const body = document.body;
-                if (!body) return;
-                body.classList[applyDark ? 'add' : 'remove']('dark-mode');
-            };
-            if (document.body) {
-                syncBody();
-            } else {
-                document.addEventListener('DOMContentLoaded', syncBody);
-            }
-        })();
-    </script>
 </head>
 
 <body>
+    <div id="sharedHeader"></div>
     <main class="main-center">
         <style>
             :root {
-                --main-glass: rgba(255, 255, 255, 0.5);
-                --main-glass-border: rgba(255, 255, 255, 0.6);
-                --main-glass-shadow: 0 25px 60px rgba(15, 15, 40, 0.45);
+                --main-glass: rgba(255, 255, 255, 0.6);
+                --main-glass-border: rgba(255, 255, 255, 0.4);
+                --main-glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
             }
 
             body.dark-mode {
-                --main-glass: rgba(30, 30, 50, 0.75);
-                --main-glass-border: rgba(255, 255, 255, 0.15);
-                --main-glass-shadow: 0 32px 70px rgba(0, 0, 0, 0.6);
+                --main-glass: rgba(30, 30, 50, 0.6);
+                --main-glass-border: rgba(255, 255, 255, 0.1);
+                --main-glass-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
             }
 
             main.main-center {
-                width: 700px;
-                min-height: 420px;
-                margin: 48px auto 32px auto;
+                width: 90%;
+                max-width: 800px;
+                margin: 2rem auto 4rem auto;
                 display: block;
                 text-align: left;
                 background: var(--main-glass);
-                border-radius: 20px;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
                 border: 1px solid var(--main-glass-border);
+                border-radius: var(--radius-xl, 20px);
                 box-shadow: var(--main-glass-shadow);
-                backdrop-filter: blur(10px) saturate(180%);
-                -webkit-backdrop-filter: blur(10px) saturate(180%);
-                padding: 32px 24px 24px 24px;
-                color: var(--btn-color, #111);
+                padding: 2.5rem;
+                color: var(--shell-text-color, #111);
+            }
+
+            @media (max-width: 768px) {
+                main.main-center {
+                    width: 95%;
+                    padding: 1.5rem;
+                    margin-top: 1rem;
+                }
             }
 
             body.dark-mode main.main-center {
-                color: #ffffff;
+                color: var(--shell-text-dark, #fff);
             }
 
             .label {
-                font-weight: bold;
-                color: #0078d4;
-                font-size: 1.08rem;
-                margin-top: 1.2em;
-                margin-bottom: 0.4em;
+                font-weight: 600;
+                color: var(--color-primary, #0078d4);
+                font-size: 1.1rem;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
                 letter-spacing: 0.01em;
                 display: block;
             }
 
-            main.main-center h1 {
-                color: var(--btn-color, #111);
+            .subtitle {
+                color: var(--color-text-secondary, #555);
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
             }
 
-            .subtitle {
-                color: #555;
+            main.main-center h1 {
+                margin-top: 0;
             }
 
             main.main-center ul {
-                padding-left: 0;
-                margin-left: 0;
+                padding-left: 1.2rem;
+                margin: 0;
             }
 
             main.main-center ul li {
-                margin-left: 1.2em;
-                list-style-position: inside;
+                margin-bottom: 0.25rem;
             }
 
             main.main-center a {
-                color: #1c7ed6;
+                color: var(--color-primary, #1c7ed6);
+                text-decoration: none;
+            }
+
+            main.main-center a:hover {
+                text-decoration: underline;
             }
 
             body.dark-mode .subtitle {
@@ -152,20 +154,6 @@
 
             body.dark-mode main.main-center a {
                 color: #38bdf8;
-            }
-
-            main.main-center b {
-                color: #222;
-            }
-
-            body.dark-mode main.main-center b {
-                color: #fff;
-            }
-
-            body.dark-mode main.main-center h1,
-            body.dark-mode .subtitle {
-                color: #ffffff;
-                opacity: 0.85;
             }
         </style>
         <h1>Harith Kavish</h1>
@@ -225,6 +213,26 @@
             <div>GitHub: <a href="https://github.com/harithkavish" target="_blank">github.com/harithkavish</a></div>
         </div>
     </main>
+    <div id="sharedFooter"></div>
+
+    <!-- Harith Design System Modules -->
+    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/theme-toggle.js"></script>
+    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/harith-shell.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof HarithShell !== 'undefined') {
+                HarithShell.renderHeader({
+                    target: '#sharedHeader',
+                    brand: { title: 'Harith Kavish', tagline: 'Portfolio' },
+                    navLinks: [
+                        { label: 'Home', href: 'https://harithkavish.github.io/' },
+                        { label: 'Resume', href: '#' }
+                    ]
+                });
+                HarithShell.renderFooter({ target: '#sharedFooter' });
+            }
+        });
+    </script>
 </body>
 
 </html>
