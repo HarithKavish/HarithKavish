@@ -60,10 +60,20 @@
 
     <!-- Neo AI Widget - Shared Loader -->
     <script src="https://harithkavish.github.io/widget-loader.js"></script>
+    
+    <!-- Harith Design System Modules -->
+    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/theme-toggle.js"></script>
+    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/harith-shell.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
 </head>
 
 <body>
-    <div id="sharedHeader"></div>
+    <harith-header 
+        site-title="Harith Kavish" 
+        site-tagline="Portfolio" 
+        nav-links='[{"label":"Home","href":"https://harithkavish.github.io/"}]'
+        google-client-id="235284376269-a8bgbs53t4jp8j82s38dbu621l47484o.apps.googleusercontent.com">
+    </harith-header>
     <main class="main-center">
         <style>
             :root {
@@ -78,105 +88,93 @@
                 --main-glass-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
             }
 
-            main.main-center {
-                width: 90%;
+            .main-center {
                 max-width: 800px;
-                margin: 2rem auto 4rem auto;
-                display: block;
-                text-align: left;
+                margin: 2rem auto;
                 background: var(--main-glass);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
                 border: 1px solid var(--main-glass-border);
-                border-radius: var(--radius-xl, 20px);
                 box-shadow: var(--main-glass-shadow);
+                border-radius: var(--radius-lg);
                 padding: 2.5rem;
-                color: var(--shell-text-color, #111);
-            }
-
-            @media (max-width: 768px) {
-                main.main-center {
-                    width: 95%;
-                    padding: 1.5rem;
-                    margin-top: 1rem;
-                }
-            }
-
-            body.dark-mode main.main-center {
-                color: var(--shell-text-dark, #fff);
+                min-height: 80vh;
             }
 
             .label {
-                font-weight: 600;
-                color: var(--color-primary, #0078d4);
-                font-size: 1.1rem;
+                font-weight: 700;
                 margin-top: 1.5rem;
-                margin-bottom: 0.5rem;
-                letter-spacing: 0.01em;
-                display: block;
-            }
-
-            .subtitle {
-                color: var(--color-text-secondary, #555);
+                color: var(--color-primary);
                 font-size: 1.1rem;
-                margin-bottom: 2rem;
+                letter-spacing: 0.5px;
             }
 
-            main.main-center h1 {
-                margin-top: 0;
-            }
-
-            main.main-center ul {
-                padding-left: 1.2rem;
+            .name-title h1 {
+                font-size: 2.5rem;
                 margin: 0;
+                background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;
             }
 
-            main.main-center ul li {
-                margin-bottom: 0.25rem;
+            .name-title h2 {
+                font-size: 1.25rem;
+                color: var(--color-text-secondary);
+                margin: 0.5rem 0 1.5rem 0;
+                font-weight: 500;
             }
 
-            main.main-center a {
-                color: var(--color-primary, #1c7ed6);
-                text-decoration: none;
+            ul {
+                padding-left: 20px;
+                list-style-type: square;
             }
 
-            main.main-center a:hover {
-                text-decoration: underline;
+            li {
+                margin-bottom: 0.5rem;
+                line-height: 1.6;
             }
 
-            body.dark-mode .subtitle {
-                color: #aaa;
+            .contact {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin-top: 0.5rem;
             }
 
-            body.dark-mode .label {
-                color: #7dd3fc;
-            }
-
-            body.dark-mode main.main-center a {
-                color: #38bdf8;
+            .contact div {
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+                font-size: 0.95rem;
             }
         </style>
-        <h1>Harith Kavish</h1>
-        <div class="subtitle">AI-Driven Systems Architect & Creative Director</div>
-        <div class="label">Career Objective:</div>
-        <div>
-            To disseminate my experience, knowledge, and skills in the professional sphere towards a resourceful
-            mission and in turn take the learning experience for gainfully fulfilling the personal and
-            organizational objectives.
+
+        <div class="name-title">
+            <h1>Harith Kavish</h1>
+            <h2>AI-Driven Systems Architect & Creative Director</h2>
         </div>
-        <div class="label">Technical Skills:</div>
+
+        <div class="label">About Me:</div>
+        <p>I am an ambitious <b>Artificial Intelligence and Data Science</b> engineering student with a strong foundation
+            in
+            <b>Java</b>, <b>Python</b>, and <b>Full Stack Development</b>. Passionate about <b>Data Science</b>,
+            <b>Machine Learning</b>, and building scalable web applications. My goal is to leverage technology to solve
+            real-world problems and drive innovation.
+        </p>
+
+        <div class="label">Skills:</div>
         <ul>
-            <li>React.js, CSS, JavaScript, HTML</li>
-            <li>Node.js, SpringBoot (Java), MySQL, PostgreSQL</li>
-            <li>Java, Python, GitHub</li>
-            <li>Tableau, Selenium, AWS</li>
-            <li>OpenCV, YOLOv8, TensorFlow, Keras</li>
+            <li><b>Languages:</b> Java, Python, C, C++, JavaScript (ES6+), SQL</li>
+            <li><b>Frameworks:</b> React.js, Node.js, Spring Boot, TensorFlow, Keras, OpenCV</li>
+            <li><b>Tools & Cloud:</b> Git/GitHub, AWS (EC2, S3), Docker, Google Colab, VS Code</li>
+            <li><b>Core Concepts:</b> Data Structures & Algorithms, OOP, DBMS, REST APIs, System Design</li>
         </ul>
+
         <div class="label">Projects:</div>
         <ul>
-            <li><b>SkinNet Analyzer:</b> Deep Learning-based skin disease detection system (TensorFlow, Keras,
-                Python, 86.7% accuracy)</li>
-            <li><b>Multi-Object Detection:</b> Computer Vision with OpenCV, YOLOv8, CNN (TensorFlow, Keras, Cifar10)
+            <li><b>Neo AI:</b> Advanced AI assistant with voice capabilities (Python, Transformers, JS)</li>
+            <li><b>Plant Disease Detection:</b> Deep Learning model for identifying crop diseases (CNN, TensorFlow)
             </li>
             <li><b>AgroCloud Finance Pro:</b> Full Stack Finance app (React+Vite, Java SpringBoot, PostgreSQL, JWT)
             </li>
@@ -213,142 +211,6 @@
             <div>GitHub: <a href="https://github.com/harithkavish" target="_blank">github.com/harithkavish</a></div>
         </div>
     </main>
-    <div id="sharedFooter"></div>
-
-    <!-- Harith Design System Modules -->
-    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/theme-toggle.js"></script>
-    <script src="https://harithkavish.github.io/harith-design-system/v1.0.0/harith-shell.js"></script>
-    <script src="https://accounts.google.com/gsi/client" async></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Render Shell
-            if (typeof HarithShell !== 'undefined') {
-                HarithShell.renderHeader({
-                    target: '#sharedHeader',
-                    brand: { title: 'Harith Kavish', tagline: 'Portfolio' },
-                    navLinks: [
-                        { label: 'Home', href: 'https://harithkavish.github.io/' }
-                    ]
-                });
-                HarithShell.renderFooter({ target: '#sharedFooter' });
-            }
-
-            // 2. Initialize Theme Toggle (Re-bind to dynamic button)
-            const toggleBtn = document.getElementById('darkModeToggle');
-            if (toggleBtn && window.HarithTheme) {
-                toggleBtn.addEventListener('click', HarithTheme.toggle);
-                const current = HarithTheme.get();
-                toggleBtn.textContent = current === 'dark' ? '☀️' : '🌙'; 
-            }
-
-            // 3. User Profile / Google Sign-In Logic
-            const GOOGLE_USER_KEY = 'harith_google_user';
-            const googleBtnTarget = document.getElementById('googleSignInButton');
-            
-            function renderProfile(user) {
-                if (!googleBtnTarget) return;
-                const dropdownId = 'userProfileDropdown';
-                googleBtnTarget.style.position = 'relative';
-                
-                // Matches "Name -> Logout" layout with circular avatar
-                googleBtnTarget.innerHTML = `
-                    <button type="button" class="signed-in-button" aria-label="Signed in as ${user.name}" aria-expanded="false" aria-controls="${dropdownId}">
-                        <img src="${user.picture || 'https://www.gravatar.com/avatar/?d=mp'}" alt="${user.name}" class="signed-in-button__avatar" loading="lazy" />
-                    </button>
-                    <div id="${dropdownId}" class="user-dropdown-menu">
-                        <div class="user-dropdown-header">
-                            <span class="user-dropdown-name">${user.name}</span>
-                        </div>
-                        <button type="button" class="user-dropdown-action" id="logoutBtn">
-                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                <polyline points="16 17 21 12 16 7"></polyline>
-                                <line x1="21" y1="12" x2="9" y2="12"></line>
-                            </svg>
-                            Sign Out
-                        </button>
-                    </div>`;
-                
-                const btn = googleBtnTarget.querySelector('.signed-in-button');
-                const dropdown = document.getElementById(dropdownId);
-                const logout = document.getElementById('logoutBtn');
-                
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const expanded = btn.getAttribute('aria-expanded') === 'true';
-                    btn.setAttribute('aria-expanded', !expanded);
-                    btn.classList.toggle('active');
-                    dropdown.classList.toggle('show');
-                });
-                
-                dropdown.addEventListener('click', e => e.stopPropagation());
-                
-                logout.addEventListener('click', () => {
-                    localStorage.removeItem(GOOGLE_USER_KEY);
-                    location.reload();
-                });
-                
-                document.addEventListener('click', () => {
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.classList.remove('active');
-                    dropdown.classList.remove('show');
-                });
-            }
-
-            function decodeJwt(credential) {
-                try {
-                    const payload = credential.split('.')[1];
-                    const base64 = payload.replace(/-/g, '+').replace(/_/g, '/');
-                    const decoded = decodeURIComponent(atob(base64)
-                        .split('')
-                        .map(char => '%' + ('00' + char.charCodeAt(0).toString(16)).slice(-2))
-                        .join(''));
-                    return JSON.parse(decoded);
-                } catch (e) { return null; }
-            }
-
-            function initGSI() {
-                if (!googleBtnTarget) return;
-
-                // Check stored user first
-                try {
-                    const stored = localStorage.getItem(GOOGLE_USER_KEY);
-                    if (stored) {
-                        try {
-                            const user = JSON.parse(stored);
-                            if (user && user.name) {
-                                renderProfile(user);
-                                return;
-                            }
-                        } catch(e) {}
-                    }
-                } catch(e) {}
-
-                // Initialize Google Button
-                if (window.google) {
-                    google.accounts.id.initialize({
-                        client_id: "235284376269-a8bgbs53t4jp8j82s38dbu621l47484o.apps.googleusercontent.com",
-                        callback: (response) => {
-                            const payload = decodeJwt(response.credential);
-                            if (payload) {
-                                const user = { 
-                                    name: payload.name, 
-                                    picture: payload.picture, 
-                                    email: payload.email 
-                                };
-                                localStorage.setItem(GOOGLE_USER_KEY, JSON.stringify(user));
-                                renderProfile(user);
-                            }
-                        }
-                    });
-                    google.accounts.id.renderButton(googleBtnTarget, { theme: "outline", size: "large", shape: "pill" });
-                }
-            }
-            
-            // Wait slightly for GSI to load if cached, or let it load async
-            setTimeout(initGSI, 100);
-        });
-    </script>
+    <harith-footer></harith-footer>
 </body>
-
 </html>
