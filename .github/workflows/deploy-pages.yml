@@ -8,13 +8,19 @@ name: Deploy Pages
 # gh-pages holds the real portfolio. Publishing main would replace the live site
 # with the placeholder, so this workflow deliberately checks out gh-pages.
 #
-# That split is itself a defect worth fixing separately -- the default branch
-# should hold what is published -- but resolving it is a content change and is
-# out of scope for moving publication into a workflow.
+# NOTE ON THE TRIGGERS. Push events read the workflow file from the PUSHED
+# branch's commit, not from the default branch. The 2026-10-09 snapshot removal
+# sat undeployed for 18h because the workflow existed only on main and
+# triggered only on main pushes, while the content changed on gh-pages.
+# This copy triggers on both publishing-relevant branches. Each push fires the
+# copy GitHub resolves for that pushed branch: gh-pages pushes fire the copy
+# that now lives on gh-pages itself; main pushes fire this one.
+# Keep this file in sync with the gh-pages copy -- identical except for the
+# trigger list, which must always include the branch the copy lives on.
 
 on:
   push:
-    branches: [main]
+    branches: [main, gh-pages]
   workflow_dispatch:
 
 permissions:
