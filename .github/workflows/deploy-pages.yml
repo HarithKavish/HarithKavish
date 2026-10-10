@@ -1,0 +1,49 @@
+name: Deploy Pages
+
+# Publication happens here, in the repository -- not in a platform setting
+# (standards/DEPLOYMENT.md).
+#
+# NOTE ON THE SOURCE BRANCH. The published site lives on gh-pages, not on main:
+# main currently holds only a Page under construction placeholder, while
+# gh-pages holds the real portfolio. Publishing main would replace the live site
+# with the placeholder, so this workflow deliberately checks out gh-pages.
+#
+# NOTE ON THE TRIGGER. Push events read the workflow file from the PUSHED
+# branch's commit, not from the default branch. A push to gh-pages can
+# therefore never run a workflow that exists only on development/main -- the
+# 2026-10-09 snapshot removal sat undeployed for 18h because of exactly this.
+# This copy lives on gh-pages itself so that pushes to this branch deploy.
+# Keep in sync with the copies on development and main: those list this branch
+# in their trigger lists too, so a push here fires whichever copy GitHub
+# resolves for this branch (this one).
+
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
